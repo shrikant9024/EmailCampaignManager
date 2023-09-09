@@ -1,0 +1,14 @@
+<!-- campaign_base.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block subject %}{% endblock %}</title>
+</head>
+<body>
+    <h1>{% block heading %}{% endblock %}</h1>
+    <p>Preview: {% block preview %}{% endblock %}</p>
+    <p>Read more: {% block article_url %}{% endblock %}</p>
+    <hr>
+    <div>{% block content %}{% endblock %}</div>
+</body>
+</html>

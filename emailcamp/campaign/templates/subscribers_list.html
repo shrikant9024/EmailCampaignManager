@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Subscriber List</title>
+</head>
+<body>
+    <h1>Subscriber List</h1>
+    <ul>
+        {% for subscriber in subscribers %}
+            <li>
+                {{ subscriber.first_name }} ({{ subscriber.email }})
+                [<a href="{% url 'unsubscribe' subscriber.email %}">Unsubscribe</a>]
+            </li>
+        {% endfor %}
+    </ul>
+    <br>
+    <a href="{% url 'add_subscriber' %}">Add Subscriber</a>
+</body>
+</html>
